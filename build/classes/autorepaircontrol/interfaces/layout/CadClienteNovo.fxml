@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="851.0" style="-fx-background-color: #FFFAFA;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autorepaircontrol.interfaces.control.CadClienteNovoController">
+   <bottom>
+      <HBox fx:id="bottomPaneMain" prefHeight="40.0" prefWidth="709.0" spacing="100.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnCadastrar" buttonType="RAISED" onAction="#EvtCadastrar" prefHeight="25.0" prefWidth="86.0" ripplerFill="#09b6bc" style="-fx-background-color: #98fb98; -fx-background-image: url(&quot;icones/icoCadastrar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Cadastrar" />
+            <JFXButton fx:id="btnFechar" buttonType="RAISED" onAction="#EvtFechar" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #FF4500; -fx-background-image: url(&quot;icones/icoFechar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Fechar" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <JFXTabPane prefHeight="216.0" prefWidth="709.0" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Informações Básicas">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+                           <children>
+                              <HBox prefHeight="30.0" prefWidth="679.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtCod" editable="false" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="61.0" promptText="Código" />
+                                    <JFXTextField fx:id="txtNome" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="429.0" promptText="Nome/Razão Social" />
+                                    <JFXTextField fx:id="txtApelido" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="294.0" promptText="Apelido/Nome Fantasia" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="txtCPF" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="236.0" promptText="CPF/CNPJ" />
+                                    <JFXTextField fx:id="txtRG" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="208.0" promptText="RG/Inscrição Estadual" />
+                                    <JFXTextField fx:id="txtEmail" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="338.0" promptText="Email" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="txtPai" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="404.0" promptText="Pai" />
+                                    <JFXTextField fx:id="txtMae" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="398.0" promptText="Mãe" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="33.0" prefWidth="821.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="txtDataNasc" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="258.0" promptText="Data Nascimento" />
+                                    <JFXTextField fx:id="txtDataExp" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="258.0" promptText="Data Expedição RG" />
+                                    <JFXTextField fx:id="txtDataCad" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="265.0" promptText="Data do Cadastramento" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="111.0" prefWidth="821.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextArea fx:id="txtObs" focusColor="#09b6bc" labelFloat="true" prefHeight="100.0" prefWidth="384.0" promptText="Observações" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="821.0" spacing="20.0">
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Emprego">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+                           <children>
+                              <HBox prefHeight="30.0" prefWidth="679.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtLocalEmpCli" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="456.0" promptText="Local Onde Trabalha" />
+                                    <JFXTextField fx:id="txtCargoCli" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="346.0" promptText="Cargo" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="txtResponsavelCli" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="407.0" promptText="Responsável" />
+                                    <JFXTextField fx:id="txtRendaCli" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="222.0" promptText="Renda" />
+                                    <JFXTextField fx:id="txtDataAdmiCli" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="153.0" promptText="Data da Admissão" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Côjuge">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+                           <children>
+                              <HBox prefHeight="30.0" prefWidth="679.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtConjure" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="822.0" promptText="Nome" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="30.0" prefWidth="679.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtLocalEmpCon" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="456.0" promptText="Local Onde Trabalha" />
+                                    <JFXTextField fx:id="txtCargoCon" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="346.0" promptText="Cargo" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="txtResponsavelCon" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="582.0" promptText="Responsável" />
+                                    <JFXTextField fx:id="txtRendaCon" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="222.0" promptText="Renda" />
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="hBoxDataAdmiCon" prefHeight="53.0" prefWidth="821.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtDataAdmiCon" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="153.0" promptText="Data da Admissão" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Endereços">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="txtCEP" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="87.0" promptText="CEP" />
+                                    <JFXComboBox fx:id="cbCidade" editable="true" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="280.0" promptText="Cidade" />
+                                    <JFXComboBox fx:id="cbUF" editable="true" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="52.0" promptText="UF" />
+                                    <JFXTextField fx:id="txtBairro" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="342.0" promptText="Bairro" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtRua" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="422.0" promptText="Rua/Avenida" />
+                                    <JFXTextField fx:id="txtNumEnd" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="81.0" promptText="Número" />
+                                    <JFXTextField fx:id="txtComplemento" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="279.0" promptText="Complemento" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="hBoxBtnInsEnd" prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <JFXComboBox fx:id="cbTipoEnd" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="219.0" promptText="Tipo" />
+                                    <JFXButton fx:id="btnInserirEnd" buttonType="RAISED" onAction="#EvtInserirEnd" prefHeight="25.0" prefWidth="121.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoEnd.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Inserir Endereço" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="231.0" prefWidth="821.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <TableView fx:id="tabelaEnd" prefHeight="331.0" prefWidth="822.0">
+                                       <columns>
+                                          <TableColumn fx:id="colCEP" prefWidth="67.0" text="CEP" />
+                                          <TableColumn fx:id="colCidade" prefWidth="116.0" text="Cidade" />
+                                          <TableColumn fx:id="colUF" prefWidth="39.0" text="UF" />
+                                          <TableColumn fx:id="colBairro" prefWidth="151.0" text="Bairro" />
+                                          <TableColumn fx:id="colRua" prefWidth="156.0" text="Rua/Avenida" />
+                                          <TableColumn fx:id="colNumEnd" prefWidth="57.0" text="Número" />
+                                          <TableColumn fx:id="colTipoEnd" prefWidth="110.0" text="Tipo" />
+                                          <TableColumn fx:id="colComplemento" prefWidth="125.0" text="Complemento" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <bottom>
+                        <HBox fx:id="bottomPaneEnd" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="btnRemoverEnd" buttonType="RAISED" onAction="#EvtRemoverEnd" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #FF4500; -fx-background-image: url(&quot;icones/icoExcluir.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Remover Endereço" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="15.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Telefones">
+               <content>
+                  <BorderPane>
+                     <center>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox fx:id="hBoxBtnInsTel" prefHeight="30.0" prefWidth="200.0" spacing="20.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="txtNumTel" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="246.0" promptText="Número" />
+                                    <JFXComboBox fx:id="cbTipoTel" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="303.0" promptText="Tipo" />
+                                    <JFXCheckBox fx:id="checkWhats" text="WhatsApp" />
+                                    <JFXButton fx:id="btnInserirTel" buttonType="RAISED" onAction="#EvtInserirTel" prefHeight="25.0" prefWidth="121.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoTel.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Inserir Telefone" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="418.0" prefWidth="821.0">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <TableView fx:id="tabelaTel" prefHeight="331.0" prefWidth="822.0">
+                                       <columns>
+                                          <TableColumn fx:id="colNumTel" prefWidth="311.0" text="Número" />
+                                          <TableColumn fx:id="colTipoTel" prefWidth="380.0" text="Tipo" />
+                                          <TableColumn fx:id="colWhats" prefWidth="130.0" text="WhatsApp" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                     <bottom>
+                        <HBox fx:id="bottomPaneTel" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="btnRemoverTel" buttonType="RAISED" onAction="#EvtRemoverTel" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #FF4500; -fx-background-image: url(&quot;icones/icoExcluir.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Remover Telefone" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets left="15.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </center>
+</BorderPane>

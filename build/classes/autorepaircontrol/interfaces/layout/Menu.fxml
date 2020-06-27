@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="709.0" style="-fx-background-color: #FFFAFA;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autorepaircontrol.interfaces.control.MenuController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu fx:id="mnCad" mnemonicParsing="false" text="Cadastros">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#EvtCadCliente" text="Cliente" />
+                        <MenuItem fx:id="mnCadFun" mnemonicParsing="false" onAction="#EvtCadFuncionario" text="Funcionário" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadProduto" text="Produto" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadMarcaProduto" text="Marca de Produto" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadFornecedor" text="Fornecedor" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadServico" text="Serviço" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadVeiculo" text="Veículo" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadMarcaVeiculo" text="Marca de Veículo" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadModeloVeiculo" text="Modelo de Veículo" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadGrupoOS" text="Grupo de Ordem de Serviço" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadGrupoProduto" text="Grupo de Produto" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadGrupoServico" text="Grupo de Serviço" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadGrupoCP" text="Grupo de Contas a Pagar" />
+                        <MenuItem mnemonicParsing="false" onAction="#EvtCadGrupoCR" text="Grupo de Contas a Receber" />
+                  </items>
+                </Menu>
+                <Menu fx:id="mnMovEst" mnemonicParsing="false" text="Movimentação de Estoque">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Acertar Estoque" />
+                  </items>
+                </Menu>
+                <Menu fx:id="mnFaturamento" mnemonicParsing="false" text="Faturamento">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Venda" />
+                        <MenuItem mnemonicParsing="false" text="Orçamento de Venda" />
+                        <MenuItem mnemonicParsing="false" text="Ordem de Serviço" />
+                        <MenuItem mnemonicParsing="false" text="Orçamento" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="mnRel" mnemonicParsing="false" text="Relatórios">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Faturamento do mês" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="709.0" spacing="70.0">
+               <children>
+                  <JFXButton fx:id="btnCadCli" buttonType="RAISED" onAction="#EvtCadCliente" prefHeight="52.0" prefWidth="52.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF;" text=" " />
+                  <JFXButton buttonType="RAISED" prefHeight="52.0" prefWidth="52.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF;" text=" " />
+                  <JFXButton buttonType="RAISED" prefHeight="52.0" prefWidth="52.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF;" text=" " />
+                  <JFXButton buttonType="RAISED" prefHeight="52.0" prefWidth="52.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF;" text=" " />
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

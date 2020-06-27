@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="975.0" style="-fx-background-color: #FFFAFA;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autorepaircontrol.interfaces.control.CadClienteController">
+   <top>
+      <HBox prefHeight="40.0" prefWidth="709.0" spacing="70.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXComboBox fx:id="cbFiltro" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="323.0" promptText="Filtrar por" />
+            <JFXTextField fx:id="txtFiltro" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="431.0" promptText="Filtro" />
+            <JFXButton fx:id="btnBuscar" buttonType="RAISED" onAction="#EvtBuscar" prefHeight="25.0" prefWidth="71.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoBuscar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Buscar" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tabela" prefHeight="313.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn id="colCod" fx:id="colCod" prefWidth="48.0" text="Código" />
+            <TableColumn id="colNome" fx:id="colNome" prefWidth="279.0" text="Nome/Razão Social" />
+            <TableColumn id="colTel" fx:id="colApe" minWidth="0.0" prefWidth="221.0" text="Apelido/Nome Fantasia" />
+            <TableColumn id="colEmail" fx:id="colCpf" minWidth="0.0" prefWidth="183.0" text="CPF/CNPJ" />
+            <TableColumn id="colEmail" fx:id="colTel" minWidth="0.0" prefWidth="233.0" text="Telefone" />
+         </columns>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox fx:id="hBoxButtons" prefHeight="40.0" prefWidth="709.0" spacing="50.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnNovo" buttonType="RAISED" onAction="#EvtNovo" prefHeight="25.0" prefWidth="62.0" ripplerFill="#09b6bc" style="-fx-background-color: #98fb98; -fx-background-image: url(&quot;icones/icoNovo.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Novo" textAlignment="RIGHT" />
+            <JFXButton fx:id="btnAlterar" buttonType="RAISED" onAction="#EvtAlterar" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #FFFFE0; -fx-background-image: url(&quot;icones/icoAlterar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Alterar" textAlignment="RIGHT" />
+            <JFXButton fx:id="btnConsultar" buttonType="RAISED" onAction="#EvtConsultar" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoConsultar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Consultar" />
+            <JFXButton fx:id="btnExcluir" buttonType="RAISED" onAction="#EvtExcluir" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #FF4500; -fx-background-image: url(&quot;icones/icoExcluir.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Excluir" />
+            <JFXButton fx:id="btnFechar" buttonType="RAISED" onAction="#EvtFechar" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #FF4500; -fx-background-image: url(&quot;icones/icoFechar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Fechar" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

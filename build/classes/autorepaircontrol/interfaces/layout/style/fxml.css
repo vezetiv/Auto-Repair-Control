@@ -1,0 +1,24 @@
+.jfx-combo-box:disabled{
+    -jfx-unfocus-color: red;
+    -jfx-focus-color: blue;
+    -fx-fill: black;
+    /*-fx-background-color: black;*/
+    -fx-opacity: 1;
+    -fx-text-fill: black;
+    -fx-font-smoothing-type: lcd;
+    -fx-context-menu-enabled: false;
+    -fx-font-smoothing-type: lcd;
+}
+.combo-box:disabled{
+    -fx-opacity: 1;
+
+    -fx-text-fill: black;
+}
+
+
+.list-cell:disabled{
+
+    -fx-opacity: 1;
+
+    -fx-text-fill: black;
+}

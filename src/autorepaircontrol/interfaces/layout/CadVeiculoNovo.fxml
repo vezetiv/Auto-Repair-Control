@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="707.0" style="-fx-background-color: #FFFAFA;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autorepaircontrol.interfaces.control.CadVeiculoNovoController">
+   <bottom>
+      <HBox fx:id="bottomPane" prefHeight="40.0" prefWidth="709.0" spacing="100.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnCadastrar" buttonType="RAISED" onAction="#EvtCadastrar" prefHeight="25.0" prefWidth="86.0" ripplerFill="#09b6bc" style="-fx-background-color: #98fb98; -fx-background-image: url(&quot;icones/icoCadastrar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Cadastrar" />
+            <JFXButton fx:id="btnFechar" buttonType="RAISED" onAction="#EvtFechar" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #FF4500; -fx-background-image: url(&quot;icones/icoFechar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Fechar" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox fx:id="centerPane" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hBoxMoMa" prefHeight="97.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txtCod" editable="false" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="71.0" promptText="Código" />
+                  <JFXComboBox fx:id="cbMarca" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="228.0" promptText="Marca" />
+                  <JFXButton fx:id="btnNovaMarca" accessibleText="Gera código de barras aleatório" buttonType="RAISED" onAction="#EvtNovaMarca" prefHeight="25.0" prefWidth="26.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoNovo.png&quot;); -fx-background-position: right; -fx-background-repeat: stretch;" text=" " />
+                  <JFXComboBox fx:id="cbModelo" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="175.0" promptText="Modelo" />
+                  <JFXButton fx:id="btnNovoModelo" accessibleText="Gera código de barras aleatório" buttonType="RAISED" onAction="#EvtNovoModelo" prefHeight="25.0" prefWidth="26.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoNovo.png&quot;); -fx-background-position: right; -fx-background-repeat: stretch;" text=" " />
+                  <JFXTextField fx:id="txtAno" focusColor="#09b6bc" labelFloat="true" onKeyPressed="#EvtMargemLucro" prefHeight="25.0" prefWidth="56.0" promptText="Ano" />
+               </children>
+            </HBox>
+            <HBox prefHeight="169.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txtPlaca" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="160.0" promptText="Placa" />
+                  <JFXTextField fx:id="txtCor" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="159.0" promptText="Cor" />
+                  <JFXTextField fx:id="txtChassis" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="151.0" promptText="Chassis" />
+                  <JFXTextField fx:id="txtMotor" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="149.0" promptText="Motor" />
+               </children>
+            </HBox>
+            <HBox prefHeight="169.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txtCodCli" editable="false" focusColor="#09b6bc" labelFloat="true" onKeyPressed="#EvtCalcularMargemLu" prefHeight="25.0" prefWidth="130.0" promptText="Cod. Cliente" />
+                  <JFXTextField fx:id="txtCliente" editable="false" focusColor="#09b6bc" labelFloat="true" onKeyPressed="#EvtCalcularMargemLu" prefHeight="25.0" prefWidth="434.0" promptText="Cliente" />
+                  <JFXButton fx:id="btnConsultar" accessibleText="Gera código de barras aleatório" buttonType="RAISED" onAction="#EvtConsultarCli" prefHeight="25.0" prefWidth="26.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoConsultar.png&quot;); -fx-background-position: right; -fx-background-repeat: stretch;" text=" " />
+                  <JFXButton fx:id="btnNovoCli" accessibleText="Gera código de barras aleatório" buttonType="RAISED" onAction="#EvtNovoCli" prefHeight="25.0" prefWidth="26.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoNovo.png&quot;); -fx-background-position: right; -fx-background-repeat: stretch;" text=" " />
+               </children>
+            </HBox>
+            <HBox prefHeight="315.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextArea fx:id="txtObs" focusColor="#09b6bc" labelFloat="true" prefHeight="67.0" prefWidth="374.0" promptText="Obsevações" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

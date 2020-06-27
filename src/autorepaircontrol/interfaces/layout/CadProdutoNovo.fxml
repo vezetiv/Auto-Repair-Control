@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="771.0" style="-fx-background-color: #FFFAFA;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autorepaircontrol.interfaces.control.CadProdutoNovoController">
+   <bottom>
+      <HBox fx:id="bottomPane" prefHeight="40.0" prefWidth="709.0" spacing="100.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnCadastrar" buttonType="RAISED" onAction="#EvtCadastrar" prefHeight="25.0" prefWidth="86.0" ripplerFill="#09b6bc" style="-fx-background-color: #98fb98; -fx-background-image: url(&quot;icones/icoCadastrar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Cadastrar" />
+            <JFXButton fx:id="btnFechar" buttonType="RAISED" onAction="#EvtFechar" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #FF4500; -fx-background-image: url(&quot;icones/icoFechar.png&quot;); -fx-background-position: left; -fx-background-repeat: stretch;" text="     Fechar" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox fx:id="centerPane" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="97.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txtCod" editable="false" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="88.0" promptText="Código" />
+                  <JFXTextField fx:id="txtDesc" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="298.0" promptText="Descrição" />
+                  <JFXTextField fx:id="txtUnidade" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="62.0" promptText="Unidade" />
+                  <JFXTextField fx:id="txtCodBarras" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Código de Barras" />
+                  <JFXButton fx:id="btnCodBarras" accessibleText="Gera código de barras aleatório" buttonType="RAISED" onAction="#EvtCodBarras" prefHeight="25.0" prefWidth="26.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoCodBarras.png&quot;); -fx-background-position: right; -fx-background-repeat: stretch;" text=" " />
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxGM" prefHeight="169.0" prefWidth="402.0" spacing="20.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <JFXComboBox fx:id="cbGrupo" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="350.0" promptText="Grupo" />
+                  <JFXButton fx:id="btnNovoGrupo" accessibleText="Gera código de barras aleatório" buttonType="RAISED" onAction="#EvtNovoGrupo" prefHeight="25.0" prefWidth="26.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoNovo.png&quot;); -fx-background-position: right; -fx-background-repeat: stretch;" text=" " />
+                  <JFXComboBox fx:id="cbMarca" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="280.0" promptText="Marca" />
+                  <JFXButton fx:id="btnNovaMarca" accessibleText="Gera código de barras aleatório" buttonType="RAISED" onAction="#EvtNovaMarca" prefHeight="25.0" prefWidth="26.0" ripplerFill="#09b6bc" style="-fx-background-color: #E0FFFF; -fx-background-image: url(&quot;icones/icoNovo.png&quot;); -fx-background-position: right; -fx-background-repeat: stretch;" text=" " />
+               </children>
+            </HBox>
+            <HBox prefHeight="169.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txtRef" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="296.0" promptText="Referência" />
+                  <JFXTextField fx:id="txtNCM" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="145.0" promptText="NCM" />
+                  <JFXTextField fx:id="txtEstMin" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="120.0" promptText="Estoque Mínimo" />
+                  <JFXTextField fx:id="txtEstMax" focusColor="#09b6bc" labelFloat="true" prefHeight="25.0" prefWidth="120.0" promptText="Estoque Máximo" />
+               </children>
+            </HBox>
+            <HBox prefHeight="169.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txtPrecoCusto" focusColor="#09b6bc" labelFloat="true" onKeyPressed="#EvtCalcularMargemLu" prefHeight="25.0" prefWidth="257.0" promptText="Preço de Custo" />
+                  <JFXTextField fx:id="txtMargemLucro" focusColor="#09b6bc" labelFloat="true" onKeyPressed="#EvtMargemLucro" prefHeight="25.0" prefWidth="188.0" promptText="Margem de Lucro" />
+                  <JFXTextField fx:id="txtPrecoVenda" focusColor="#09b6bc" labelFloat="true" onKeyPressed="#EvtCalcularMargemLu" prefHeight="25.0" prefWidth="257.0" promptText="Preço de Venda" />
+               </children>
+            </HBox>
+            <HBox prefHeight="315.0" prefWidth="402.0" spacing="20.0">
+               <children>
+                  <JFXTextArea fx:id="txtObs" focusColor="#09b6bc" labelFloat="true" prefHeight="67.0" prefWidth="374.0" promptText="Obsevações" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
